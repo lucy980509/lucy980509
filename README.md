@@ -9,7 +9,7 @@ lucy980509/lucy980509 is a ✨ special ✨ repository because its `README.md` (t
 You can click the Preview link to take a look at your changes.
 --->
 
-<img scr="https://img.shields.io/badge/-PYTHON-3776AB?logo=html5&logoColor=fff"
+<img scr="https://img.shields.io/badge/-PYTHON-3776AB?logo=html5&logoColor=fff">
      
 ![Github Stats](https://github-readme-stats.vercel.app/api?username=LUCY980509&count_private=true&show_icons=true&theme=radical)
 
