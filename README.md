@@ -1,16 +1,101 @@
-## Hi there 👋
+# Hi, I'm Lucy
 
-<!--
-**lucy980509/lucy980509** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Computer Science student interested in Machine Learning Systems, AI Infrastructure, and Deep Learning Deployment.
 
-Here are some ideas to get you started:
+I enjoy building end-to-end machine learning pipelines, from model development to production-oriented inference systems.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Currently focusing on:
+
+- Deep Learning
+- ML Infrastructure
+- C++ based AI deployment
+- Efficient model inference
+
+---
+
+## Projects
+
+### Wafer Defect Classification Using CNN
+
+A deep learning pipeline for semiconductor wafer defect classification using PyTorch.
+
+Highlights:
+
+- WM-811K wafer map dataset
+- CNN model development with PyTorch
+- Class imbalance handling using weighted loss
+- Model evaluation with Accuracy and Weighted F1 score
+- Confusion matrix and error analysis
+- ONNX model export
+
+Repository:
+https://github.com/lucy980509/wafer-defect-classification
+
+
+### C++ ONNX Runtime Inference Engine
+
+A native C++ inference pipeline for deploying a trained CNN model without Python runtime dependency.
+
+Highlights:
+
+- C++17 inference application
+- OpenCV preprocessing pipeline
+- ONNX Runtime model execution
+- CMake build system
+- Python and C++ numerical consistency validation
+
+Repository:
+https://github.com/lucy980509/wafer-cpp-inference
+
+---
+
+## Technical Skills
+
+### Languages
+
+- Python
+- C++
+- SQL
+
+### Machine Learning
+
+- PyTorch
+- Deep Learning
+- Computer Vision
+- CNNs
+- ONNX
+- Model Deployment
+
+### Systems & Tools
+
+- Linux
+- CMake
+- Git
+- OpenCV
+- ONNX Runtime
+
+---
+
+## Currently Learning
+
+- Machine Learning Infrastructure
+- Efficient AI Systems
+- Distributed Systems
+- GPU Computing
+- Production ML Deployment
+
+---
+
+## Career Interest
+
+I am interested in building reliable and efficient AI systems that connect machine learning models with real-world production environments.
+
+---
+
+## Contact
+
+LinkedIn:
+[(Your LinkedIn URL)](https://www.linkedin.com/in/sumin-sim-836350384/?isSelfProfile=true)
+
+GitHub:
+https://github.com/lucy980509
