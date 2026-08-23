@@ -95,7 +95,7 @@ I am interested in building reliable and efficient AI systems that connect machi
 ## Contact
 
 LinkedIn:
-(https://www.linkedin.com/in/sumin-sim-836350384/?isSelfProfile=true)
+https://www.linkedin.com/in/sumin-sim-836350384/?isSelfProfile=true
 
 GitHub:
 https://github.com/lucy980509
