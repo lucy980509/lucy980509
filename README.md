@@ -42,8 +42,10 @@ Highlights:
 - C++17 inference application
 - OpenCV preprocessing pipeline
 - ONNX Runtime model execution
-- CMake build system
+- End-to-end inference pipeline with **0.334 ms latency**
+- **2,993 FPS** end-to-end throughput
 - Python and C++ numerical consistency validation
+- CMake build system
 
 Repository:
 https://github.com/lucy980509/wafer-cpp-inference
