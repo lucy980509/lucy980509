@@ -24,7 +24,8 @@ Highlights:
 - WM-811K wafer map dataset
 - CNN model development with PyTorch
 - Class imbalance handling using weighted loss
-- Model evaluation with Accuracy and Weighted F1 score
+- Train / validation / test evaluation
+- Test Accuracy of 83.25% and Weighted F1 of 83.42%
 - Confusion matrix and error analysis
 - ONNX model export
 
