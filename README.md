@@ -2,6 +2,8 @@
   <img src="./assets/github-profile-banner.png" width="100%" alt="Lucy Sim — Machine Learning Systems & AI Infrastructure">
 </p>
 
+## About Me
+
 Computer Science student at **Korea National Open University (KNOU)** interested in **Machine Learning Systems and AI Infrastructure**, with a focus on **GPU inference, model serving, batching, scheduling, and performance optimization**.
 
 My projects explore the path from model development and native C++ deployment to GPU inference optimization and serving-system research.
