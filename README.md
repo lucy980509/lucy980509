@@ -1,6 +1,6 @@
 # Hi, I'm Lucy
 
-Computer Science student at Korea National Open University (KNOU), interested in **Machine Learning Systems and AI Infrastructure**, with a focus on GPU inference, model serving, and performance optimization.
+Computer Science student at **Korea National Open University (KNOU)** interested in **Machine Learning Systems and AI Infrastructure**, with a focus on **GPU inference, model serving, batching, scheduling, and performance optimization**.
 
 My projects explore the path from model development and native C++ deployment to GPU inference optimization and serving-system research.
 
@@ -9,16 +9,18 @@ My projects explore the path from model development and native C++ deployment to
 ## Research Interests
 
 - Machine Learning Systems
-- GPU Inference and Serving
-- ML Systems Performance Optimization
-- Scheduling and Resource Management
+- GPU Inference & Model Serving
+- Batching & Scheduling
+- Performance Optimization
 - Distributed ML Systems
+- Resource Management for AI Workloads
 
 ---
 
-## Projects
+## Featured Projects
 
-### Adaptive Batching for GPU Inference Serving — Research Project (In Progress)
+### Adaptive Batching for GPU Inference Serving
+**Research Project · In Progress**
 
 Investigating when adaptive batching provides meaningful benefits over static batching under varying request workloads.
 
@@ -26,23 +28,22 @@ Investigating when adaptive batching provides meaningful benefits over static ba
 
 > Under what workload conditions does adaptive batching outperform static batching in GPU inference serving, and what are the resulting trade-offs between tail latency, throughput, and GPU utilization?
 
-Highlights:
+**Highlights**
 
 - Comparing static and queue-aware adaptive batching policies
 - Designing controlled experiments across low, medium, high, and bursty workloads
-- Evaluating throughput, P50/P95/P99 latency, and GPU utilization
-- Investigating throughput–latency trade-offs in GPU inference serving
+- Measuring throughput, P50/P95/P99 latency, and GPU utilization
+- Analyzing throughput–latency trade-offs under different workload conditions
 
-Repository:  
-https://github.com/lucy980509/adaptive-batching-gpu-inference
+[View Repository →](https://github.com/lucy980509/adaptive-batching-gpu-inference)
 
 ---
 
 ### GPU Inference Performance Analysis & Optimization
 
-A systematic performance study of GPU inference using ONNX Runtime and CUDA, following a baseline → profile → bottleneck → optimize → re-measure workflow.
+A systematic performance study of GPU inference using **ONNX Runtime and CUDA**, following a baseline → profile → bottleneck → optimize → re-measure workflow.
 
-Highlights:
+**Highlights**
 
 - CUDA Execution Provider with ONNX Runtime
 - FP32 and FP16 inference analysis
@@ -52,91 +53,84 @@ Highlights:
 - Evaluation of RAM caching and I/O Binding
 - Analysis of GPU execution behavior and end-to-end performance
 
-Repository:  
-https://github.com/lucy980509/wafer-defect-inference-cuda
+[View Repository →](https://github.com/lucy980509/wafer-defect-inference-cuda)
 
 ---
 
 ### C++ ONNX Runtime Inference Engine
 
-A native C++ inference pipeline for deploying a trained CNN model without Python runtime dependency.
+A native **C++17 inference pipeline** for deploying a trained CNN model without a Python runtime dependency.
 
-Highlights:
+**Highlights**
 
-- C++17 inference application
+- Native C++17 inference application
 - OpenCV preprocessing pipeline
 - ONNX Runtime model execution
-- End-to-end inference pipeline
+- End-to-end inference workflow
 - Python/C++ numerical consistency validation
-- CMake build system
+- CMake-based build system
 
-Repository:  
-https://github.com/lucy980509/wafer-cpp-inference
+[View Repository →](https://github.com/lucy980509/wafer-cpp-inference)
 
 ---
 
 ### Wafer Defect Classification Using CNN
 
-A deep learning pipeline for semiconductor wafer defect classification using PyTorch.
+A deep learning pipeline for semiconductor wafer defect classification using **PyTorch**.
 
-Highlights:
+**Highlights**
 
 - WM-811K wafer map dataset
 - CNN model development with PyTorch
 - Class imbalance handling using weighted loss
 - Train / validation / test evaluation
 - Confusion matrix and error analysis
-- ONNX model export
+- ONNX model export for downstream deployment
 
-Repository:  
-https://github.com/lucy980509/wafer-defect-classification
+[View Repository →](https://github.com/lucy980509/wafer-defect-classification)
 
 ---
 
-## Technical Skills
+## 🛠 Technical Skills
 
 ### Languages
 
-- Python
-- C++
-- SQL
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 ### Machine Learning & Deployment
 
-- PyTorch
-- ONNX
-- ONNX Runtime
-- OpenCV
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![ONNX](https://img.shields.io/badge/ONNX-005CED?style=for-the-badge&logo=onnx&logoColor=white)
+![ONNX Runtime](https://img.shields.io/badge/ONNX%20Runtime-222222?style=for-the-badge)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
 
 ### Systems & Performance
 
-- CUDA
-- NVIDIA Nsight Systems
-- Linux
-- CMake
-- Git
+![CUDA](https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![NVIDIA Nsight](https://img.shields.io/badge/NVIDIA%20Nsight-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 ---
 
-## Current Focus
+## Current Research Focus
 
-- GPU inference performance
-- ML inference serving
-- Batching and scheduling
-- Efficient AI infrastructure
+I am currently exploring efficient GPU inference serving, with particular interest in how **batching, scheduling, workload characteristics, and system bottlenecks** affect:
 
----
+- Throughput
+- Tail latency
+- GPU utilization
+- Resource efficiency
 
-## Career & Research Direction
-
-I am interested in designing efficient and scalable machine learning systems, particularly GPU inference and serving infrastructure. My current work focuses on understanding and optimizing the trade-offs between latency, throughput, and GPU utilization in ML inference workloads.
+My long-term goal is to work on **efficient and scalable ML infrastructure**, especially systems for large-scale model inference and serving.
 
 ---
 
 ## Contact
 
-LinkedIn:  
-https://www.linkedin.com/in/sumin-sim-836350384/
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sumin%20Sim-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sumin-sim-836350384/)
 
-GitHub:  
-https://github.com/lucy980509
+[![GitHub](https://img.shields.io/badge/GitHub-lucy980509-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/lucy980509)
