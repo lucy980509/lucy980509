@@ -54,6 +54,7 @@ Highlights:
 
 Repository:  
 https://github.com/lucy980509/wafer-defect-inference-cuda
+
 ---
 
 ### C++ ONNX Runtime Inference Engine
