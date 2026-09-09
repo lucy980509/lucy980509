@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/github-profile-banner.png" width="100%" alt="Lucy Sim — Machine Learning Systems & AI Infrastructure">
+  <img src="./assets/github-profile-banner_v2.png" width="100%" alt="Lucy Sim — Machine Learning Systems & AI Infrastructure">
 </p>
 
 ## About Me
