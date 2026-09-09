@@ -134,3 +134,9 @@ My long-term goal is to work on **efficient and scalable ML infrastructure**, es
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Sumin%20Sim-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sumin-sim-836350384/)
 
 [![GitHub](https://img.shields.io/badge/GitHub-lucy980509-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/lucy980509)
+
+---
+
+## Contributions
+
+![3D Contribution Graph](./profile-3d-contrib/profile-night-green.svg)
