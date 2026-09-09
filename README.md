@@ -53,8 +53,7 @@ Highlights:
 - Analysis of GPU execution behavior and end-to-end performance
 
 Repository:  
-<!-- Add your P2 repository URL here -->
-
+https://github.com/lucy980509/wafer-defect-inference-cuda
 ---
 
 ### C++ ONNX Runtime Inference Engine
