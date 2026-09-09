@@ -1,4 +1,6 @@
-# Hi, I'm Lucy
+<p align="center">
+  <img src="./assets/github-profile-banner.png" width="100%" alt="Lucy Sim — Machine Learning Systems & AI Infrastructure">
+</p>
 
 Computer Science student at **Korea National Open University (KNOU)** interested in **Machine Learning Systems and AI Infrastructure**, with a focus on **GPU inference, model serving, batching, scheduling, and performance optimization**.
 
