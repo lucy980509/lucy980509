@@ -144,3 +144,7 @@ My long-term goal is to work on **efficient and scalable ML infrastructure**, es
 ## Contributions
 
 ![3D Contribution Graph](./profile-3d-contrib/profile-night-green.svg)
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=lucy980509&label=Profile%20Views" />
+</p>
