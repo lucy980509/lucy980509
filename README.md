@@ -94,6 +94,8 @@ A deep learning pipeline for semiconductor wafer defect classification using **P
 [View Repository →](https://github.com/lucy980509/wafer-defect-classification)
 
 ---
+## Certifications
+### Certified Kubernetes Administrator (CKA)
 
 ## 🛠 Technical Skills
 
@@ -123,6 +125,7 @@ A deep learning pipeline for semiconductor wafer defect classification using **P
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
 
 ### Development Tools
 
