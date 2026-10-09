@@ -97,7 +97,7 @@ A deep learning pipeline for semiconductor wafer defect classification using **P
 ## Certifications
 ### Certified Kubernetes Administrator (CKA)
 
-## 🛠 Technical Skills
+## Technical Skills
 
 ### Languages
 
