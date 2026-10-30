@@ -95,7 +95,15 @@ A deep learning pipeline for semiconductor wafer defect classification using **P
 
 ---
 ## Certifications
+
 ### Certified Kubernetes Administrator (CKA)
+
+[![CKA Badge](BADGE_IMAGE_URL)](CREDLY_PUBLIC_URL)
+
+- **Issued by:** The Linux Foundation
+- **Issued:** October 2026
+- **Credential ID:** LF-z2q5td53ev
+- [Verify credential](CREDLY_PUBLIC_URL)
 
 ## Technical Skills
 
