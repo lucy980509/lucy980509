@@ -6,7 +6,7 @@
 
 Computer Science student at **Korea National Open University (KNOU)** interested in **Machine Learning Systems and AI Infrastructure**, with a focus on **GPU inference, model serving, batching, scheduling, and performance optimization**.
 
-My projects explore the path from model development and native C++ deployment to GPU inference optimization and serving-system research.
+My projects connect model development, native C++ deployment, GPU profiling, and inference-serving experiments. I use measurements to identify bottlenecks, evaluate changes, and understand where an approach helps—and where it falls short.
 
 ---
 
@@ -23,21 +23,26 @@ My projects explore the path from model development and native C++ deployment to
 
 ## Featured Projects
 
-### Adaptive Batching for GPU Inference Serving
-**Research Project · In Progress**
+### GPU Inference Serving: Static, Adaptive & SLO-aware Batching
 
-Investigating when adaptive batching provides meaningful benefits over static batching under varying request workloads.
+**Completed Experimental Study · C++17 · ONNX Runtime · CUDA**
+
+Built a ResNet-50 inference-serving simulation to investigate how batching policies affect latency and throughput under different request workloads.
 
 **Research Question**
 
-> Under what workload conditions does adaptive batching outperform static batching in GPU inference serving, and what are the resulting trade-offs between tail latency, throughput, and GPU utilization?
+> Under which request loads does each batching policy meet a latency target, and what does waiting to form a batch cost?
 
 **Highlights**
 
-- Comparing static and queue-aware adaptive batching policies
-- Designing controlled experiments across low, medium, high, and bursty workloads
-- Measuring throughput, P50/P95/P99 latency, and GPU utilization
-- Analyzing throughput–latency trade-offs under different workload conditions
+- Implemented Static, Adaptive wait, Adaptive immediate, and SLO-aware batching with a thread-safe request queue
+- Used 1,000 preprocessed ImageNet validation images with reproducible image ordering and planned arrival schedules
+- Completed **84 performance runs** across low, medium, high, and bursty workloads, plus **21 separate GPU-monitored runs**
+- At 250 requests/s, batching configurations sustained approximately **248–249 requests/s**, while Static batch 1 accumulated a backlog at approximately **189 requests/s**
+- Observed workload-dependent trade-offs: immediate dispatch achieved low latency at light loads, while batching helped sustain higher request rates
+- Found that SLO-aware scheduling did not consistently outperform simpler policies and missed its target at low load
+- Diagnosed rising service time at low load and observed an association with GPU clock and performance-state changes; causality remains unconfirmed
+- Published request-level metrics, charts, scheduler tests, reproduction instructions, and experimental limitations
 
 [View Repository →](https://github.com/lucy980509/adaptive-batching-gpu-inference)
 
@@ -45,17 +50,18 @@ Investigating when adaptive batching provides meaningful benefits over static ba
 
 ### GPU Inference Performance Analysis & Optimization
 
-A systematic performance study of GPU inference using **ONNX Runtime and CUDA**, following a baseline → profile → bottleneck → optimize → re-measure workflow.
+**ONNX Runtime · CUDA · NVIDIA Nsight Systems**
+
+A performance study following a **baseline → profile → identify bottleneck → optimize → re-measure** workflow.
 
 **Highlights**
 
-- CUDA Execution Provider with ONNX Runtime
-- FP32 and FP16 inference analysis
-- Batch-size scaling experiments
-- GPU profiling with NVIDIA Nsight Systems
-- Identification of host-side preprocessing and I/O bottlenecks
-- Evaluation of RAM caching and I/O Binding
-- Analysis of GPU execution behavior and end-to-end performance
+- Evaluated FP32 and FP16 inference using ONNX Runtime's CUDA Execution Provider
+- Investigated batch-size scaling and GPU execution behavior with NVIDIA Nsight Systems
+- Identified disk I/O and image decoding as approximately **95.4% of Batch-64 end-to-end latency** in the tested pipeline
+- Reduced measured Batch-64 latency from **11.236 ms to 0.359 ms** by preloading inputs into RAM
+- Evaluated RAM caching and I/O Binding
+- Examined why GPU-focused optimizations provided limited benefits for a small CNN
 
 [View Repository →](https://github.com/lucy980509/wafer-defect-inference-cuda)
 
@@ -63,16 +69,16 @@ A systematic performance study of GPU inference using **ONNX Runtime and CUDA**,
 
 ### C++ ONNX Runtime Inference Engine
 
-A native **C++17 inference pipeline** for deploying a trained CNN model without a Python runtime dependency.
+**C++17 · OpenCV · ONNX Runtime · CMake**
+
+A native inference pipeline for deploying a trained CNN **without a Python runtime dependency**.
 
 **Highlights**
 
-- Native C++17 inference application
-- OpenCV preprocessing pipeline
-- ONNX Runtime model execution
-- End-to-end inference workflow
-- Python/C++ numerical consistency validation
-- CMake-based build system
+- Implemented image preprocessing and model inference in C++17
+- Integrated OpenCV and ONNX Runtime
+- Validated numerical consistency between Python and C++ inference
+- Built an end-to-end inference application with CMake
 
 [View Repository →](https://github.com/lucy980509/wafer-cpp-inference)
 
@@ -80,20 +86,22 @@ A native **C++17 inference pipeline** for deploying a trained CNN model without 
 
 ### Wafer Defect Classification Using CNN
 
-A deep learning pipeline for semiconductor wafer defect classification using **PyTorch**.
+**PyTorch · WM-811K · ONNX**
+
+A deep learning pipeline for semiconductor wafer defect classification.
 
 **Highlights**
 
-- WM-811K wafer map dataset
-- CNN model development with PyTorch
-- Class imbalance handling using weighted loss
-- Train / validation / test evaluation
-- Confusion matrix and error analysis
-- ONNX model export for downstream deployment
+- Developed a CNN using the WM-811K wafer map dataset
+- Addressed class imbalance with weighted loss
+- Evaluated train, validation, and test performance
+- Used confusion matrices and error analysis to examine model behavior
+- Exported the trained model to ONNX for downstream C++ deployment
 
 [View Repository →](https://github.com/lucy980509/wafer-defect-classification)
 
 ---
+
 ## Certifications
 
 ### Certified Kubernetes Administrator (CKA)
@@ -106,6 +114,8 @@ A deep learning pipeline for semiconductor wafer defect classification using **P
 - **Issued:** October 2026
 - **Credential ID:** LF-z2q5td53ev
 - [Verify credential](https://www.credly.com/badges/6f2145aa-3fc0-4c2f-8cc5-8a2194bebabd/public_url)
+
+---
 
 ## Technical Skills
 
@@ -146,14 +156,11 @@ A deep learning pipeline for semiconductor wafer defect classification using **P
 
 ## Current Research Focus
 
-I am currently exploring efficient GPU inference serving, with particular interest in how **batching, scheduling, workload characteristics, and system bottlenecks** affect:
+My recent projects examine how **input pipelines, batching policies, and runtime behavior** affect GPU inference performance.
 
-- Throughput
-- Tail latency
-- GPU utilization
-- Resource efficiency
+Through profiling and controlled experiments, I have explored host-side bottlenecks, throughput–latency trade-offs, and the limitations of service-time estimates in deadline-aware scheduling.
 
-My long-term goal is to work on **efficient and scalable ML infrastructure**, especially systems for large-scale model inference and serving.
+I am interested in extending this work toward **efficient and scalable ML infrastructure**, particularly inference serving and resource management.
 
 ---
 
@@ -170,5 +177,5 @@ My long-term goal is to work on **efficient and scalable ML infrastructure**, es
 ![3D Contribution Graph](./profile-3d-contrib/profile-night-green.svg)
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=lucy980509&label=Profile%20Views" />
+  <img src="https://komarev.com/ghpvc/?username=lucy980509&label=Profile%20Views" alt="Profile views">
 </p>
