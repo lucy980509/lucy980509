@@ -23,6 +23,21 @@ My projects connect model development, native C++ deployment, GPU profiling, and
 
 ## Featured Projects
 
+### ResNet-50 GPU Batching Benchmark
+
+**C++17 · ONNX Runtime · CUDA · Multithreading**
+
+Extended my earlier batching project to compare Static, Dynamic, and Adaptive policies using real ImageNet inputs.
+
+- Evaluated batch capacities **1, 2, 4, 8, and 16** across four workloads: **180 runs and 180,000 request completions**
+- Separated arrival delay, queue wait, batch collection, and execution time to analyze latency
+- Increased high-load Static throughput from **193.48 to 326.88 requests/s** by increasing capacity from 1 to 16, averaged over three runs
+- Demonstrated workload-dependent trade-offs: Adaptive reduced low-load waiting but did not consistently outperform simpler policies
+
+[View Repository →](https://github.com/lucy980509/resnet50-batching-benchmark)
+
+---
+
 ### GPU Inference Serving: Static, Adaptive & SLO-aware Batching
 
 **Completed Experimental Study · C++17 · ONNX Runtime · CUDA**
