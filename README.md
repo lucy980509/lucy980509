@@ -27,12 +27,13 @@ My projects connect model development, native C++ deployment, GPU profiling, and
 
 **C++17 · ONNX Runtime · CUDA · Multithreading**
 
-Extended my earlier batching project to compare Static, Dynamic, and Adaptive policies using real ImageNet inputs.
+Extended my earlier ResNet-50 batching project to investigate queueing bottlenecks and evaluate Static, Dynamic, and SLO-aware Adaptive policies.
 
-- Evaluated batch capacities **1, 2, 4, 8, and 16** across four workloads: **180 runs and 180,000 request completions**
-- Separated arrival delay, queue wait, batch collection, and execution time to analyze latency
-- Increased high-load Static throughput from **193.48 to 326.88 requests/s** by increasing capacity from 1 to 16, averaged over three runs
-- Demonstrated workload-dependent trade-offs: Adaptive reduced low-load waiting but did not consistently outperform simpler policies
+- Built a multithreaded C++17 benchmark using real ImageNet inputs, a thread-safe request queue, and reproducible arrival schedules
+- Corrected Adaptive backlog handling to collect already queued requests even after the collection deadline, while limiting additional waiting for new arrivals
+- Instrumented arrival delay, queue wait, batch collection, and execution time to distinguish where latency accumulated
+- Evaluated five batch capacities across four workloads in **180 runs with 180,000 request completions**; increasing Static capacity from 1 to 16 raised high-load throughput from **193.48 to 326.88 requests/s** and reduced P95 from **2,063.61 to 100.40 ms**
+- Identified workload-dependent trade-offs: larger batches reduced high-load backlog, while smaller batches or Adaptive collection avoided excessive waiting at low load
 
 [View Repository →](https://github.com/lucy980509/resnet50-batching-benchmark)
 
